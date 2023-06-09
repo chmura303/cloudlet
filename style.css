@@ -1,0 +1,193 @@
+/* ------------------- */
+/* Custom properties   */
+/* ------------------- */
+
+:root {
+  /* Color */
+  --clr-light-100: #ffffff;
+  --clr-light-200: #b3b3b3;
+
+  --clr-dark-100: #404040;
+  --clr-dark-200: #282828;
+  --clr-dark-300: #181818;
+  --clr-dark-400: #121212;
+
+  /* Font size */
+  --fs-100: 0.626rem;
+  --fs-200: 0.75rem;
+  --fs-300: 0.875rem;
+  --fs-400: 0.9375rem;
+  --fs-500: 1.125rem;
+  --fs-600: 1.2rem;
+  --fs-700: 1.75rem;
+  --fs-750: 2.5rem;
+  --fs-800: 3.5rem;
+  --fs-850: 4.5rem;
+  --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
+
+  /* Font weight */
+  --fw-100: 100;
+  --fw-200: 200;
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+
+  /* Font family */
+  --ff-primary: 'Sora', sans-serif;
+}
+
+/* ------------------- */
+/* CSS Reset               */
+/* ------------------- */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin, padding; inherit fonts */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove outline on focus */
+*:focus {
+  outline: none;
+}
+
+/* Set default color scheme */
+html {
+  color-scheme: dark light;
+}
+
+/* Set core body defaults */
+body {
+  height: 100vh;
+  position: relative;
+
+  color: var(--clr-light-100);
+  background: var(--clr-light-400);
+
+  font-family: var(--ff-primary);
+  font-size: var(--fs-600);
+}
+
+body::after {
+  content: '';
+  display: block;
+  height: 50px;
+}
+
+/* Make images and videos easier to work with */
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+/* Remove default link styles */
+a {
+  text-decoration: none;
+  color: var(--clr-light-100);
+}
+
+/* ------------------- */
+/* Custom CSS          */
+/* ------------------- */
+
+.container {
+  display: grid;
+  gap: 1.25rem;
+  grid-auto-columns: 1fr;
+  grid-template-rows: auto repeat(3, 1fr) auto;
+  height: 100%;
+  grid-template-areas:
+    'search'
+    'current'
+    'other'
+    'sun'
+    'copyright';
+
+  padding: 1.25rem;
+}
+
+.search {
+  grid-area: search;
+  margin-inline: auto;
+  display: flex;
+}
+
+.search .input {
+  max-width: 225px;
+  border: none;
+  background: none;
+}
+
+.current {
+  grid-area: current;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.current .city i {
+  font-size: var(--fs-400);
+}
+
+.current .temp {
+  font-size: var(--fs-800);
+  font-weight: var(--fw-700);
+}
+
+.current .icon {
+  display: flex;
+  justify-content: center;
+}
+
+.other {
+  grid-area: other;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.sun {
+  grid-area: sun;
+  margin-inline: auto;
+  display: flex;
+  gap: 2em;
+}
+
+i {
+  vertical-align: middle;
+  font-size: var(--fs-200);
+}
+
+.other h3,
+.sun h3 {
+  font-size: var(--fs-200);
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.unit,
+.cond,
+.copyright {
+  opacity: 0.8;
+}
+
+.copyright {
+  grid-area: copyright;
+  margin-inline: auto;
+  text-align: center;
+  font-size: var(--fs-300);
+  font-weight: var(--fw-200);
+}

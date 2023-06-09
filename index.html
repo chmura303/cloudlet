@@ -9,8 +9,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Sora:wght@300;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700&display=swap"
       rel="stylesheet"
+    />
+
+    <!-- Flaticon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"
     />
 
     <!-- Favicon -->
@@ -50,52 +56,61 @@
 
   <body>
     <div class="container">
-      <h1>Cloudlet</h1>
+      <form action="" id="form" class="search">
+        <input
+          type="text"
+          name="input"
+          id="input"
+          class="input"
+          placeholder="Enter a city"
+          required
+          autofocus
+        />
+        <button type="submit" class="btn search">Search</button>
+      </form>
 
-      <div class="app">
-        <div class="form">
-          <form action="" id="form">
-            <input type="text" name="input" id="input" />
-            <button type="submit" class="btn search">Search</button>
-          </form>
+      <div class="current">
+        <h2 class="city"><i class="fi fi-rr-marker"></i> London</h2>
+        <h2 class="icon"><img src="./img/weather/cloud.png" alt="" /></h2>
+        <h2 class="cond">Cloudy</h2>
+        <h2 class="temp">16.4<span class="unit">&deg;C</span></h2>
+      </div>
+
+      <div class="other">
+        <div class="feels">
+          <h3><i class="fi fi-rr-thermometer-half"></i> Feels Like</h3>
+          <p>20.6<span class="unit">&deg;C</span></p>
         </div>
-
-        <div class="current">
-          <h2 class="city">London</h2>
-          <h2 class="temp">16.4&deg;C</h2>
-          <h2 class="cond">Cloudy</h2>
-          <h2 class="icon"></h2>
+        <div class="humid">
+          <h3><i class="fi fi-rr-humidity"></i> Humidity</h3>
+          <p>80<span class="unit">%</span></p>
         </div>
-
-        <div class="additional">
-          <div class="feels">
-            <h2>Feels Like</h2>
-            <p>20.6&deg;</p>
-          </div>
-          <div class="humid">
-            <h2>Humidity</h2>
-            <p>80%</p>
-          </div>
-          <div class="wind">
-            <h2>Wind</h2>
-            <p>17.7 mph</p>
-          </div>
-        </div>
-
-        <div class="sun">
-          <div class="sunrise">
-            <h2>Sunrise</h2>
-            <p>06:02 AM</p>
-          </div>
-          <div class="sunset">
-            <h2>Sunset</h2>
-            <p>08:04 PM</p>
-          </div>
+        <div class="wind">
+          <h3><i class="fi fi-rr-wind"></i> Wind</h3>
+          <p>17.7<span class="unit">mph</span></p>
         </div>
       </div>
 
-      <div class="footer">
-        <div class="copyright">Copyright &copy; 2023 chmura303</div>
+      <div class="sun">
+        <div class="rise">
+          <h3><i class="fi fi-rr-sunrise-alt"></i> Sunrise</h3>
+          <p>06:02<span class="unit">am</span></p>
+        </div>
+        <div class="set">
+          <h3><i class="fi fi-rr-sunset"></i> Sunset</h3>
+          <p>08:04<span class="unit">pm</span></p>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <div>
+          Copyright &copy; 2023 chmura303 |
+          <a target="_blank" href="https://icons8.com/icon/qA3w9Yp2vY7r/weather"
+            >Weather</a
+          >
+          icons by
+          <a target="_blank" href="https://icons8.com">Icons8</a>
+        </div>
       </div>
     </div>
   </body>
