@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cloudlet</title>
 
-    <!-- Google Fonts -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -48,5 +48,55 @@
     <script defer src="./forecast.js"></script>
   </head>
 
-  <body></body>
+  <body>
+    <div class="container">
+      <h1>Cloudlet</h1>
+
+      <div class="app">
+        <div class="form">
+          <form action="" id="form">
+            <input type="text" name="input" id="input" />
+            <button type="submit" class="btn search">Search</button>
+          </form>
+        </div>
+
+        <div class="current">
+          <h2 class="city">London</h2>
+          <h2 class="temp">16.4&deg;C</h2>
+          <h2 class="cond">Cloudy</h2>
+          <h2 class="icon"></h2>
+        </div>
+
+        <div class="additional">
+          <div class="feels">
+            <h2>Feels Like</h2>
+            <p>20.6&deg;</p>
+          </div>
+          <div class="humid">
+            <h2>Humidity</h2>
+            <p>80%</p>
+          </div>
+          <div class="wind">
+            <h2>Wind</h2>
+            <p>17.7 mph</p>
+          </div>
+        </div>
+
+        <div class="sun">
+          <div class="sunrise">
+            <h2>Sunrise</h2>
+            <p>06:02 AM</p>
+          </div>
+          <div class="sunset">
+            <h2>Sunset</h2>
+            <p>08:04 PM</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="copyright">Copyright &copy; 2023 chmura303</div>
+      </div>
+    </div>
+  </body>
 </html>
