@@ -23,7 +23,7 @@
   --fs-500: 1.125rem;
   --fs-600: 1.2rem;
   --fs-700: 1.75rem;
-  --fs-750: 2.5rem;
+  --fs-750: 2.25rem;
   --fs-800: 3.5rem;
   --fs-850: 4.5rem;
   --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
@@ -46,7 +46,7 @@
   /* opacity */
   --op-100: 0.9;
   --op-200: 0.8;
-  --op-300: 0.75;
+  --op-300: 0.7;
   --op-400: 0.6;
 
   /* gap */
@@ -57,8 +57,8 @@
   --gap-500: 0.6rem;
   --gap-600: 0.9rem;
   --gap-700: 1rem;
-  --gap-800: 1.25rem;
-  --gap-900: 1.75rem;
+  --gap-800: 1.5rem;
+  --gap-900: 2.75rem;
 
   /* padding */
   --pad-100: 0.3rem;
@@ -139,6 +139,10 @@ a {
   display: grid;
 }
 
+.margin-auto {
+  margin: auto;
+}
+
 .margin-inline-auto {
   margin-inline: auto;
 }
@@ -169,6 +173,10 @@ a {
 
 .justify-content-center {
   justify-content: center;
+}
+
+.justify-content-space-between {
+  justify-content: space-between;
 }
 
 /* text color */
@@ -383,10 +391,6 @@ a {
   color: var(--clr-dark-300);
 }
 
-img {
-  filter: invert(90%);
-}
-
 .search {
   grid-area: search;
 }
@@ -406,14 +410,38 @@ img {
 #input {
   border: none;
   border-bottom: 1px solid var(--clr-dark-300);
+  height: 2.25rem;
+}
+
+#input::placeholder {
+  text-transform: none;
 }
 
 #search {
-  border: none;
   cursor: pointer;
-  opacity: var(--op-300);
+  border: none;
+  height: 2.25rem;
+  transition: 250ms;
 }
 
 #search:hover {
   opacity: 1;
 }
+
+.other,
+.sun {
+  /* From https://css.glass */
+  background: rgba(255, 253, 250, 0.17);
+  border-radius: 4px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+
+  padding: 2rem 1rem;
+  min-width: 100vw;
+}
+
+/* .element {
+  background: #a7171a;
+  background-image: url('./img/bg-clouds.jpg');
+} */
