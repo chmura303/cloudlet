@@ -20,7 +20,7 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css"
+      href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css"
     />
 
     <!-- Favicons -->
@@ -56,6 +56,7 @@
     <!-- JavaScript -->
     <script defer src="./app.js"></script>
     <script defer src="./forecast.js"></script>
+    <script defer src="./dark-theme.js"></script>
   </head>
 
   <body>
@@ -77,12 +78,13 @@
             </button>
           </form>
         </div>
+
         <div class="current margin-auto text-align-center">
           <h2 class="ff-decorative fs-700 fw-700">
             London, UK
             <i class="fi fi-rs-marker vertical-align-middle fs-700 op-300"></i>
           </h2>
-          <h2>
+          <h2 class="image">
             <img
               class="margin-auto"
               src="./img/weather-dark/cloud.png"
@@ -94,6 +96,7 @@
             16.4<span class="fs-700 op-400 vertical-align-super">&deg;C</span>
           </h2>
         </div>
+
         <div
           class="conditions grid margin-auto justify-content-space-between gap-500"
         >
@@ -142,6 +145,16 @@
             <div class="fs-600">16<span class="op-400">mi</span></div>
           </div>
         </div>
+
+        <div class="switch margin-auto">
+          <input type="checkbox" class="checkbox" id="checkbox" />
+          <label for="checkbox" class="checkbox-label">
+            <i class="fi fi-sr-moon"></i>
+            <i class="fi fi-sr-sun"></i>
+            <span class="ball"></span>
+          </label>
+        </div>
+
         <div
           class="copyright flex align-items-end text-align-center justify-content-center op-100 pad-100 fw-300 fs-200"
         >
