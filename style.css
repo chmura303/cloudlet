@@ -386,7 +386,6 @@ a {
 
 .container {
   height: 100vh;
-  grid-template-rows: auto repeat(3, 1fr) auto;
   grid-auto-columns: 1fr;
   grid-template:
     'search'
@@ -434,9 +433,20 @@ a {
   opacity: 1;
 }
 
+.weather-icon img {
+  padding: var(--pad-300) 0 var(--pad-100) 0;
+  width: 50px;
+  margin-inline: auto;
+}
+
+.current {
+  display: none;
+}
+
 .conditions {
+  display: none;
   grid-template:
-    'feelslike humidity wind'
+    'feels pressure wind'
     'sunrise sunset visibility';
 
   gap: var(--gap-100);
@@ -451,6 +461,10 @@ a {
 }
 
 /* switch button */
+
+.switch {
+  display: none;
+}
 
 .checkbox {
   opacity: 0;
@@ -496,6 +510,27 @@ a {
   transform: translateX(24px);
 }
 
+/* dark theme for mobile & desktop */
+
+.theme-dark {
+  color: var(--clr-light-100);
+  background: var(--clr-dark-300);
+
+  background: rgba(255, 253, 250, 0.05);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.filter-dark {
+  filter: invert(100%);
+}
+
+/* 404 */
+
+.not-found {
+  display: none;
+}
+
 /* ------------------- */
 /* Media               */
 /* ------------------- */
@@ -538,22 +573,8 @@ a {
     margin: 0.25em;
   }
 
+  /* dark theme for desktop */
   .bg-dark {
-    background-image: url('./img/bg-dark1.jpg');
+    background-image: url('./img/bg-dark.jpg');
   }
-}
-
-/* light/dark theme */
-
-.theme-dark {
-  color: var(--clr-light-100);
-  background: var(--clr-dark-300);
-
-  background: rgba(255, 253, 250, 0.05);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-}
-
-.filter-dark {
-  filter: invert(100%);
 }
