@@ -383,31 +383,34 @@ a {
   grid-template:
     'search'
     'current'
-    'other'
-    'sun'
+    'conditions'
     'copyright';
 
   background-color: var(--clr-light-100);
   color: var(--clr-dark-300);
+
+  /* background-image: linear-gradient(
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.3)
+    ),
+    url('./img/bg-clouds.jpg'); */
 }
 
-.search {
+. .search {
   grid-area: search;
 }
 .current {
   grid-area: current;
 }
-.other {
-  grid-area: other;
-}
-.sun {
-  grid-area: sun;
+.conditions {
+  grid-area: conditions;
 }
 .copyright {
   grid-area: copyright;
 }
 
 #input {
+  max-width: 280px;
   border: none;
   border-bottom: 1px solid var(--clr-dark-300);
   height: 2.25rem;
@@ -428,20 +431,63 @@ a {
   opacity: 1;
 }
 
-.other,
-.sun {
-  /* From https://css.glass */
-  background: rgba(255, 253, 250, 0.17);
-  border-radius: 4px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+.conditions {
+  grid-template:
+    'feelslike humidity wind'
+    'sunrise sunset visibility';
 
-  padding: 2rem 1rem;
-  min-width: 100vw;
+  gap: var(--gap-100);
 }
 
-/* .element {
-  background: #a7171a;
-  background-image: url('./img/bg-clouds.jpg');
-} */
+.box {
+  background: rgba(255, 253, 250, 0.17);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  padding: var(--pad-500) var(--pad-100);
+  border-radius: 4px;
+}
+
+/* ------------------- */
+/* Media               */
+/* ------------------- */
+
+@media (min-width: 600px) {
+  .search {
+    padding: var(--pad-500);
+  }
+
+  .wrapper {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    background-image: url('./img/bg-clouds.jpg');
+    background-size: cover;
+  }
+
+  .container {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+
+    height: 700px;
+    width: 700px;
+
+    background: rgba(255, 253, 250, 0.25);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+
+    border-radius: 6px;
+  }
+
+  .conditions {
+    max-width: 500px;
+    background: none;
+    box-shadow: none;
+  }
+
+  .box {
+    padding: var(--pad-700) var(--pad-300);
+    margin: 0.25em;
+  }
+}

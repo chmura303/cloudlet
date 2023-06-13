@@ -59,101 +59,103 @@
   </head>
 
   <body>
-    <div class="container grid ff-primary ls-100">
-      <div class="search flex margin-auto">
-        <form action="submit" id="form">
-          <input
-            type="text"
-            name="input"
-            id="input"
-            class="bg-transparent uppercase fs-600 color-dark-300"
-            placeholder="Choose your city"
-            required
-            autofocus
-          />
-          <button id="search" class="bg-transparent color-dark-300 op-400">
-            <i class="fi fi-rr-search vertical-align-middle fs-700"></i>
-          </button>
-        </form>
-      </div>
-
-      <div class="current margin-auto text-align-center">
-        <h2 class="ff-decorative fs-700 fw-700">
-          London, UK
-          <i class="fi fi-rs-marker vertical-align-middle fs-700 op-300"></i>
-        </h2>
-        <h2>
-          <img
-            class="margin-auto"
-            src="./img/weather-dark/cloud.png"
-            alt="cloud"
-          />
-        </h2>
-        <h2 class="ff-decorative fw-700 uppercase ls-300">Cloudy</h2>
-        <h2 class="ff-decorative fs-900 fw-700">
-          16.4<span class="fs-700 op-400 vertical-align-super">&deg;C</span>
-        </h2>
-      </div>
-
-      <div class="other flex margin-auto justify-content-space-between gap-500">
-        <div>
-          <div class="flex op-400">
-            <i class="fi fi-rr-thermometer-half vertical-align-middle"></i>
-            <h2 class="uppercase fs-200">Feels Like</h2>
-          </div>
-          <div class="fs-600">20.6<span class="op-400">&deg;C</span></div>
+    <div class="wrapper">
+      <div class="container grid ff-primary ls-100">
+        <div class="search flex margin-auto">
+          <form action="submit" id="form">
+            <input
+              type="text"
+              name="input"
+              id="input"
+              class="bg-transparent uppercase fs-600 color-dark-300"
+              placeholder="Choose your city"
+              required
+              autofocus
+            />
+            <button id="search" class="bg-transparent color-dark-300 op-400">
+              <i class="fi fi-rr-search vertical-align-middle fs-700"></i>
+            </button>
+          </form>
         </div>
-        <div>
-          <div class="flex op-400">
-            <i class="fi fi-rr-humidity vertical-align-middle"></i>
-            <h2 class="uppercase fs-200">Humidity</h2>
-          </div>
-          <div class="fs-600">80<span class="op-400">%</span></div>
+        <div class="current margin-auto text-align-center">
+          <h2 class="ff-decorative fs-700 fw-700">
+            London, UK
+            <i class="fi fi-rs-marker vertical-align-middle fs-700 op-300"></i>
+          </h2>
+          <h2>
+            <img
+              class="margin-auto"
+              src="./img/weather-dark/cloud.png"
+              alt="cloud"
+            />
+          </h2>
+          <h2 class="ff-decorative fw-700 uppercase ls-300">Cloudy</h2>
+          <h2 class="temperature ff-decorative fs-900 fw-700">
+            16.4<span class="fs-700 op-400 vertical-align-super">&deg;C</span>
+          </h2>
         </div>
-        <div>
-          <div class="flex op-400">
-            <i class="fi fi-rr-wind vertical-align-middle"></i>
-            <h2 class="uppercase fs-200">Wind</h2>
+        <div
+          class="conditions grid margin-auto justify-content-space-between gap-500"
+        >
+          <div class="feelslike box">
+            <div class="flex op-400">
+              <i
+                class="fs-200 fi fi-rr-thermometer-half vertical-align-middle"
+              ></i>
+              <h2 class="uppercase fs-200">Feels Like</h2>
+            </div>
+            <div class="fs-600">20.6<span class="op-400">&deg;C</span></div>
           </div>
-          <div class="fs-600">17.7<span class="op-400">mph</span></div>
-        </div>
-      </div>
-
-      <div class="sun flex justify-content-space-between margin-auto gap-500">
-        <div>
-          <div class="flex op-400">
-            <i class="fi fi-rr-sunrise-alt vertical-align-middle"></i>
-            <h2 class="uppercase fs-200">Sunrise</h2>
+          <div class="humidity box">
+            <div class="flex op-400">
+              <i class="fs-200 fi fi-rr-humidity vertical-align-middle"></i>
+              <h2 class="uppercase fs-200">&nbsp;Humidity</h2>
+            </div>
+            <div class="fs-600">80<span class="op-400">%</span></div>
           </div>
-          <div class="fs-600">06:02<span class="op-400">am</span></div>
-        </div>
-        <div>
-          <div class="flex op-400">
-            <i class="fi fi-rr-sunset vertical-align-middle"></i>
-            <h2 class="uppercase fs-200">Sunset</h2>
+          <div class="Wind box">
+            <div class="flex op-400">
+              <i class="fs-200 fi fi-rr-wind vertical-align-middle"></i>
+              <h2 class="uppercase fs-200">&nbsp;Wind</h2>
+            </div>
+            <div class="fs-600">17.7<span class="op-400">mph</span></div>
           </div>
-          <div class="fs-600">08:04<span class="op-400">pm</span></div>
-        </div>
-        <div>
-          <div class="flex op-400">
-            <i class="fi fi-rr-eye vertical-align-middle"></i>
-            <h2 class="uppercase fs-200">Visibility</h2>
+          <div class="sunrise box">
+            <div class="flex op-400">
+              <i class="fs-200 fi fi-rr-sunrise-alt vertical-align-middle"></i>
+              <h2 class="uppercase fs-200">&nbsp;Sunrise</h2>
+            </div>
+            <div class="fs-600">06:02<span class="op-400">am</span></div>
           </div>
-          <div class="fs-600">16<span class="op-400">km</span></div>
+          <div class="sunset box">
+            <div class="flex op-400">
+              <i class="fs-200 fi fi-rr-sunset vertical-align-middle"></i>
+              <h2 class="uppercase fs-200">&nbsp;Sunset</h2>
+            </div>
+            <div class="fs-600">08:04<span class="op-400">pm</span></div>
+          </div>
+          <div class="visibility box">
+            <div class="flex op-400">
+              <i class="fs-200 fi fi-rr-eye vertical-align-middle"></i>
+              <h2 class="uppercase fs-200">&nbsp;Visibility</h2>
+            </div>
+            <div class="fs-600">16<span class="op-400">mi</span></div>
+          </div>
         </div>
-      </div>
-
-      <div
-        class="copyright flex align-items-end text-align-center justify-content-center op-100 pad-100 fw-300"
-      >
-        <div>
-          Copyright &copy; 2023 by Chmura303 |
-          <a target="_blank" href="https://icons8.com/icon/qA3w9Yp2vY7r/weather"
-            >Weather</a
-          >
-          icons by
-          <a target="_blank" href="https://icons8.com">Icons8</a> and
-          <a href="https://www.flaticon.com/">Flaticon</a>
+        <div
+          class="copyright flex align-items-end text-align-center justify-content-center op-100 pad-100 fw-300 fs-200"
+        >
+          <div>
+            Copyright &copy; 2023 by Chmura303 |
+            <a
+              target="_blank"
+              href="https://icons8.com/icon/qA3w9Yp2vY7r/weather"
+              >Weather</a
+            >
+            icons by
+            <a target="_blank" href="https://icons8.com">Icons8</a> and
+            <a href="https://www.flaticon.com/">Flaticon</a>
+          </div>
         </div>
       </div>
     </div>
