@@ -40,14 +40,14 @@ form.addEventListener('submit', e => {
       wind.textContent = data.Wind.Speed.Imperial.Value;
 
       fall.textContent = data.PrecipitationSummary.Precipitation.Imperial.Value;
-      uv.textContent = data.UVIndexText;
+      uv.textContent = data.UVIndex;
       visibility.textContent = data.Visibility.Imperial.Value;
 
       const num = data.WeatherIcon;
       const path = '<img src="./img/weather-dark/';
 
       if (num <= 2) {
-        icon.innerHTML = `${path}sun.png`;
+        icon.innerHTML = `${path}sun.png" />`;
       } else if (num === 3 || num === 4) {
         icon.innerHTML = `${path}day-partly-cloudy.png" />`;
       } else if (num === 5) {
@@ -96,5 +96,5 @@ form.addEventListener('submit', e => {
   conditions.style.display = 'grid';
   themeSwitch.style.display = 'block';
 
-  // form.reset();
+  form.reset();
 });
