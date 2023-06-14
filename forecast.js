@@ -3,7 +3,7 @@ const API =
     ? 'http://dataservice.accuweather.com'
     : 'https://dataservice.accuweather.com';
 
-const key = '7mrOGHxhz3eBJLYvg2hngLwMsBGxyg4T';
+const key = 'AfQHEBF7Evm1JcRwVAEoVt5tMGT92w6v';
 
 export const getCity = async city => {
   const res = await fetch(

@@ -62,21 +62,40 @@
   <body>
     <div class="wrapper">
       <div class="container grid ff-primary ls-100">
-        <div class="not-found">Oops! 404</div>
+        <div
+          class="welcome margin-auto pad-500 text-align-center fs-750 fw-700 ff-decorative"
+        >
+          <img
+            src="./img/favicon/android-chrome-96x96.png"
+            alt=""
+            class="margin-auto pad-500"
+          />
+          <h1>Welcome to Cloudlet, your favorite weather app!</h1>
+        </div>
+        <div class="not-found margin-auto fw-700 fs-700 ff-decorative">
+          <img
+            class="error-img margin-auto pad-500"
+            src="./img/error-404.png"
+            alt=""
+          />
+          <p>No results found.</p>
+          <p>Please try again.</p>
+        </div>
+
         <div class="search flex margin-auto">
           <form action="submit" id="form">
-            <input
-              type="text"
-              name="input"
-              id="input"
-              class="bg-transparent uppercase fs-600 color-dark-300"
-              placeholder="Choose your city"
-              required
-              autofocus
-            />
-            <button id="search" class="bg-transparent color-dark-300 op-400">
-              <i class="fi fi-rr-search vertical-align-middle fs-700"></i>
-            </button>
+            <div class="input-icons">
+              <i class="search-icon fi fi-rr-search op-400"></i>
+              <input
+                type="text"
+                name="input"
+                id="input"
+                class="bg-transparent uppercase fs-600 color-dark-300 bg-light-100"
+                placeholder="Choose a city"
+                required
+                autofocus
+              />
+            </div>
           </form>
         </div>
 
@@ -174,15 +193,20 @@
           class="copyright flex align-items-end text-align-center justify-content-center op-100 pad-100 fw-300 fs-200"
         >
           <div>
-            Copyright &copy; 2023 by Chmura303 |
+            Copyright &copy; 2023 by Chmura303
             <a
               target="_blank"
               href="https://icons8.com/icon/qA3w9Yp2vY7r/weather"
-              >Weather</a
+              >| Weather</a
             >
             icons by
             <a target="_blank" href="https://icons8.com">Icons8</a> and
             <a href="https://www.flaticon.com/">Flaticon</a>
+            <a
+              href="https://www.flaticon.com/free-icons/error-404"
+              title="error 404 icons"
+              >| Error 404 icons created by vectorsmarket15 - Flaticon</a
+            >
           </div>
         </div>
       </div>

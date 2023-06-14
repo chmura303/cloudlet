@@ -18,6 +18,7 @@ const visibility = document.querySelector('.result.visibility');
 const current = document.querySelector('.current');
 const conditions = document.querySelector('.conditions');
 const themeSwitch = document.querySelector('.switch');
+const welcome = document.querySelector('.welcome');
 const notFound = document.querySelector('.not-found');
 
 form.addEventListener('submit', e => {
@@ -90,11 +91,21 @@ form.addEventListener('submit', e => {
         icon.innerHTML = '';
       }
     })
-    .catch(err => console.log(err));
+    .catch(err => {
+      console.log(err);
+      current.style.display = 'none';
+      conditions.style.display = 'none';
+      themeSwitch.style.display = 'none';
+
+      notFound.style.display = 'block';
+      welcome.style.display = 'none';
+    });
 
   current.style.display = 'block';
   conditions.style.display = 'grid';
   themeSwitch.style.display = 'block';
+  welcome.style.display = 'none';
+  notFound.style.display = 'none';
 
   form.reset();
 });

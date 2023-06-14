@@ -5,6 +5,7 @@
 :root {
   /* color */
   --clr-light-100: #fffdfa;
+  --clr-light-150: #f6f7f8;
   --clr-light-200: #969892;
 
   --clr-dark-100: #404040;
@@ -185,6 +186,9 @@ a {
 
 .color-light-100 {
   color: var(--clr-light-100);
+}
+.color-light-150 {
+  color: var(--clr-light-150);
 }
 .color-light-200 {
   color: var(--clr-light-200);
@@ -396,7 +400,7 @@ a {
     'switch'
     'copyright';
 
-  grid-template-rows: 80px auto auto 50px 50px;
+  grid-template-rows: 80px 1.5fr 1fr 80px 60px;
 }
 
 .search {
@@ -414,24 +418,37 @@ a {
 
 #input {
   max-width: 280px;
-  border: none;
-  border-bottom: 1px solid var(--clr-dark-300);
   height: 2.25rem;
+  background: var(--clr-light-150);
+  padding-left: 0.5em;
+  border-radius: 1.25em;
+  border: 1px solid var(--clr-light-100);
+  padding: 10px;
+  padding-left: 30px;
+  transition: 250ms;
 }
 
 #input::placeholder {
   text-transform: none;
 }
 
-#search {
-  cursor: pointer;
-  border: none;
-  height: 2.25rem;
-  transition: 250ms;
+#input:hover {
+  border: 1px solid var(--clr-light-200);
+  background: var(--clr-light-100);
 }
 
-#search:hover {
-  opacity: 1;
+.input-icons i {
+  position: absolute;
+}
+
+.input-icons {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.search-icon {
+  padding: 10px;
+  min-width: 40px;
 }
 
 .weather-icon img {
@@ -515,17 +532,13 @@ a {
 .theme-dark {
   color: var(--clr-light-100);
   background: var(--clr-dark-300);
-
-  background: rgba(255, 253, 250, 0.05);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
 }
 
 .filter-dark {
   filter: invert(100%);
 }
 
-/* 404 */
+/* 404 Not Found */
 
 .not-found {
   display: none;
@@ -541,7 +554,12 @@ a {
     width: 100vw;
     display: flex;
     justify-content: center;
-    background-image: url('./img/bg-light.jpg');
+    background: rgb(0, 176, 243);
+    background: linear-gradient(
+      330deg,
+      rgba(0, 176, 243, 1) 25%,
+      rgba(255, 253, 250, 1) 100%
+    );
     background-size: cover;
   }
 
@@ -553,7 +571,7 @@ a {
     width: 750px;
     border-radius: 6px;
 
-    background: rgba(255, 253, 250, 0.15);
+    background: rgba(255, 253, 250, 0.9);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
   }
@@ -570,7 +588,16 @@ a {
   }
 
   /* dark theme for desktop */
+
   .bg-dark {
-    background-image: url('./img/bg-dark.jpg');
+    background: rgb(8, 7, 7);
+    background: linear-gradient(
+      330deg,
+      rgba(8, 7, 7, 1) 0%,
+      rgba(64, 64, 64, 1) 100%
+    );
+  }
+  .container-dark {
+    background: var(--clr-dark-300);
   }
 }
