@@ -4,6 +4,7 @@ const searchIcon = document.querySelector('.search-icon');
 const container = document.querySelector('.container');
 const icon = document.querySelector('.result.weather-icon');
 const checkbox = document.querySelector('.checkbox');
+const error404 = document.querySelector('.error-404');
 
 checkbox.addEventListener('change', e => {
   e.preventDefault();
@@ -13,4 +14,5 @@ checkbox.addEventListener('change', e => {
   search.classList.toggle('filter-dark');
   searchIcon.classList.toggle('filter-dark');
   wrapper.classList.toggle('bg-dark');
+  error404.classList.toggle('filter-dark');
 });

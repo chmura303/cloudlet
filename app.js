@@ -1,13 +1,18 @@
 import { getCity, getWeather } from './forecast.js';
 
+// form
 const form = document.querySelector('#form');
 const input = document.querySelector('#input');
 
+// current
+const current = document.querySelector('.current');
 const name = document.querySelector('.result.english-name');
 const temp = document.querySelector('.result.temperature');
 const text = document.querySelector('.result.weather-text');
 const icon = document.querySelector('.result.weather-icon');
 
+// conditions
+const conditions = document.querySelector('.conditions');
 const feels = document.querySelector('.result.feels');
 const pressure = document.querySelector('.result.pressure');
 const wind = document.querySelector('.result.wind');
@@ -15,12 +20,12 @@ const fall = document.querySelector('.result.fall');
 const uv = document.querySelector('.result.uv');
 const visibility = document.querySelector('.result.visibility');
 
-const current = document.querySelector('.current');
-const conditions = document.querySelector('.conditions');
-const themeSwitch = document.querySelector('.switch');
+// welcome message, 404 page, theme switch
 const welcome = document.querySelector('.welcome');
 const notFound = document.querySelector('.not-found');
+const themeSwitch = document.querySelector('.switch');
 
+// submit event
 form.addEventListener('submit', e => {
   e.preventDefault();
 
